@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <!--Menuliskan tag Meta-->
+         <meta charset="utf-8">
+         <meta name="descriptions" content="Kuliner Lampung">
+         <meta name="author" content="Eliza-11914002">
+         
+        <!--Menggunakan tag title-->
+        <title>Minggu3 - Eliza</title>
+
+        <!--mengaitkan link css-->
+        <link rel="stylesheet" type="text/css" href="./Eliza_119140002_M3.css">
+
+        <!--mengaitkan link javascript-->
+        <script src="./Eliza_119140002_M3.js" defer></script>
+    </head>
+    <body>
+        <div class="mainContent">
+            <h1>Selamat Datang</h1>
+            <p>Di website kuliner lampung</p>
+
+            <div class="firstContent">
+                <p id='theTime'></p>
+            </div>
+
+            <div class="secondContent">
+                <label for="food">Lagi pengen makan apa hari ini</label>
+                <select id="selectFood" onchange="makan()">
+                    <option value="pedas" selected>Pedas</option>
+                    <option value="manis">Manis</option>
+                    <option value="asam">Asam</option>
+                    <option value="gurih">Gurih</option>
+                </select>
+                <p id="quotesOfTheDay"></p>                
+            </div>
+
+            <div class="thirdContent">
+                <label for="theme">Pilih tema untuk website ini</label>
+                <select id="selectTheme" onchange="theme()">
+                    <option value="gelap" class="gelap">Gelap</option>
+                    <option value="terang" class="terang" selected>Terang</option>
+                </select>
+            </div>
+
+            <div class="fourthContent">
+                <p>Sebelum kamu pergi beli makan, pilih angka disamping biar kamu tau nilai faktorialnya</p>
+                <label for="factorial">Pilih angka</label>
+                <input id="angkaFact" >
+                <button id="btnFact" onclick="hitung()">Hitung Faktorial</button>
+                <p id="factorialResult"></p>
+            </div>
+        </div>                
+    </body>
+</html>
