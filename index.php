@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>percobaan m8</title>
     <style>
-        body{
-            background-color: #d5f0f3;
+        * {
+            margin: 0;
+            padding: 0;
         }
-        .bucket{
+
+        body {
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .body-bg {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .bucket {
             width: 25vw;
-            background-color: white;
-            margin: 25vh auto;
+            background-color: rgba(67, 0, 220, 0.2);
+            /* margin: 25vh auto; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             padding: 25px;
             font-size: 12pt;
-            box-shadow: 10px 10px 5px grey;
+            /* box-shadow: 10px 10px 5px grey; */
         }
-        .bucket p{
+
+        .bucket p {
             text-align: center;
             text-transform: uppercase;
         }
-        
-        .login-field{
-            box-sizing: border-box;    
+
+        .login-field {
+            box-sizing: border-box;
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
+            background: transparent;
+            border: none;
+            text-shadow: 0 0 whitesmoke;
+            font-weight: 600;
+            opacity: 0.6;
+            color: white;
+            border-radius: 7px;
         }
-        .login-btn-submit{
+
+        .login-btn-submit {
             background-color: #46de4b;
             color: white;
             font-size: 12pt;
@@ -36,11 +63,13 @@
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
+            cursor: pointer;
         }
     </style>
 </head>
+
 <body>
-    <?php //echo 1/0; ?>
+    <img src="./assets/wave.svg" alt="wave background" class="body-bg">
     <div class="bucket">
         <p>Login For Continue </p>
         <form action="login.php" method="post" class="login">
@@ -52,4 +81,5 @@
         </form>
     </div>
 </body>
+
 </html>
