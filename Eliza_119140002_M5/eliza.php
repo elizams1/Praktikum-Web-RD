@@ -18,8 +18,8 @@
         <div class="card">
             <div class="card-body">
                 <div class="kalkulator">            
-                    <?php
-                        if(isset($_POST['hitung'])){
+                    <?php                                                
+                        function kalkulator() {                                                  
                             $angka1 = $_POST["angka1"];
                             $angka2 = $_POST["angka2"];
                             $operasi = $_POST["operasi"];
@@ -37,8 +37,12 @@
                             }
                             else if($operasi=="%"){            
                                 $hasil = $angka1 % $angka2;            
-                            }        
-                        }       
+                            }  
+                            return $hasil;                                  
+                        }
+                        
+                        
+                                                
                     ?>
                     <div class="form form-kalkulator">
                         <form method="post" action="eliza.php">
@@ -59,10 +63,10 @@
                             </div>                                                                                                               
                         </form>
                         <?php 
-                            if(isset($_POST['hitung'])){                
+                            if(isset($_POST['hitung'])){                                
                         ?>
                         <div class="mb-3">
-                            <input type="text" name="hasil" value="<?php echo $hasil; ?>" class="hasil form-control">
+                            <input type="text" name="hasil" value="<?php echo kalkulator(); ?>" class="hasil form-control">
                         </div>
                         <?php
                             }else{
@@ -85,18 +89,23 @@
                     <p>Urutkan : "Larine","Aduh","Qifuat","Toda","Anevi","Samid","Kifuat"</p>                    
                     <?php                                                           
                         $nama = array("Larine","Aduh","Qifuat","Toda","Anevi","Samid","Kifuat");
-                        for($i=0;$i<7;$i++){
-                            for($j=$i+1;$j<7;$j++){
-                                if($nama[$i]>$nama[$j]){
-                                    $cur=$nama[$i];
-                                    $nama[$i]=$nama[$j];
-                                    $nama[$j]=$cur;
+                                                
+                        function urut($nama){
+                                for($i=0;$i<7;$i++){
+                                for($j=$i+1;$j<7;$j++){
+                                    if($nama[$i]>$nama[$j]){
+                                        $cur=$nama[$i];
+                                        $nama[$i]=$nama[$j];
+                                        $nama[$j]=$cur;
+                                    }
                                 }
                             }
+                            for($i=0;$i<7;$i++){
+                                echo "$nama[$i]"."  ";                    
+                            } 
                         }
-                        for($i=0;$i<7;$i++){
-                            echo "$nama[$i]"."  ";                    
-                        }                                                                                
+                        
+                        urut($nama);
                     ?>
                 </div>
             </div>
@@ -107,17 +116,21 @@
                 <div class="prima">
                     <p>Berikut merupakan perhitungan bilangan prima dari 1 sampai 50</p>
                     <?php
-                        for($i=1;$i<=50;$i++){
-                            $bil=0;
-                            for($j=1;$j<=$i;$j++){
-                                if($i%$j==0){
-                                    $bil++;
+                        function prima(){                        
+                            for($i=1;$i<=50;$i++){
+                                $bil=0;
+                                for($j=1;$j<=$i;$j++){
+                                    if($i%$j==0){
+                                        $bil++;
+                                    }
+                                }
+                                if($bil==2){
+                                    echo $i.' ';
                                 }
                             }
-                            if($bil==2){
-                                echo $i.' ';
-                            }
-                        }                    
+                        } 
+                        
+                        prima();
                     ?>
                 </div>
             </div>
