@@ -1,7 +1,5 @@
-<?php 
-$username = 'faradila';
-$password = '444';
-if ($_POST['uname']==$username && $_POST['pass']==$password ) {
-    header('Location: ./welkam.php');
-}
-?>
+<?php
+require_once('app/User.php');
+
+$user = new User();
+$user->authenticate($_POST['uname'], $_POST['pass']);

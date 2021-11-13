@@ -15,6 +15,7 @@
         body {
             min-height: 100vh;
             position: relative;
+            background: linear-gradient(263deg, #00000059, #00000036);
         }
 
         .body-bg {
@@ -25,7 +26,7 @@
 
         .bucket {
             width: 25vw;
-            background-color: rgba(67, 0, 220, 0.2);
+            background-color: rgba(67, 0, 220, 0.4);
             /* margin: 25vh auto; */
             position: absolute;
             top: 50%;
@@ -46,12 +47,12 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
-            background: transparent;
+            /* background: transparent; */
             border: none;
             text-shadow: 0 0 whitesmoke;
             font-weight: 600;
-            opacity: 0.6;
-            color: white;
+            opacity: 0.8;
+            /* color: white; */
             border-radius: 7px;
         }
 
@@ -69,10 +70,10 @@
 </head>
 
 <body>
-    <img src="./assets/wave.svg" alt="wave background" class="body-bg">
+    <!-- <img src="./assets/wave.svg" alt="wave background" class="body-bg"> -->
     <div class="bucket">
         <p>Login For Continue </p>
-        <form action="login.php" method="post" class="login">
+        <form action="./login.php" method="post" class="login">
             <label for="uname">Username</label>
             <input type="text" name="uname" id="uname" placeholder="Username..." class="login-field">
             <label for="pass">Password</label>
