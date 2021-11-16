@@ -1,0 +1,23 @@
+.card{
+    margin: 30px !important;        
+}
+.harga-buah{
+    padding: 20px ;
+    text-align: center;
+}
+.form-buah{
+    padding: 20px ;    
+}
+.total-buah{
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+
+footer p{
+    margin-bottom: 0px;
+}
+.author{
+    margin-bottom: 20px;
+}
