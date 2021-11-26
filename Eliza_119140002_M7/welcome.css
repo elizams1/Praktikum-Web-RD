@@ -1,0 +1,29 @@
+*{
+    font-family: "Verdana", sans-serif;
+}
+
+body{
+    background-image: url(../Eliza_119140002_M7/pemandangan.jfif);
+}
+
+.container{
+    margin-top: 12%;
+}
+
+.judul{
+    color: #ffff;
+    font-weight: bold;
+    text-shadow: 0 2px 1px #58b368;
+    margin-bottom: 20px;
+}
+
+.tombol{
+    display: flex;
+    justify-content: center;
+    gap : 10px;
+}
+
+.btn:hover{
+    background-color: #58b368 !important;
+    border: none !important;
+}
