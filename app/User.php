@@ -3,7 +3,7 @@ require_once('db/Koneksi.php');
 
 class User
 {
-    var $BASE_URL = "/prak";
+    var $BASE_URL = "/minggu8/Praktikum-Web-RD";
     public function __construct()
     {
         $db = new Koneksi();
@@ -15,11 +15,12 @@ class User
         $auth = $this->conn->query("SELECT * from user WHERE username='{$uname}' AND pass='{$pass}' LIMIT 1");
 
 
-        if ($auth->num_rows !== 0) {
+        if ($auth->num_rows !== 0) {            
             //Authentikasi user diterima
             header("Location: {$this->BASE_URL}/home.php");
         } else {
-            header("Location: {$this->BASE_URL}/index.php");
+            //Jika tidak diterima
+            header("Location: {$this->BASE_URL}/index.php");            
         }
     }
 }
